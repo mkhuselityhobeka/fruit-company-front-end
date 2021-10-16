@@ -1,0 +1,12 @@
+.mycontent-left {
+    border-right: 1px dashed #333;
+  }
+  .backgroud-mage { 
+    background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
