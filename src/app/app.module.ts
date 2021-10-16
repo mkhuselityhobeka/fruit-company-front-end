@@ -7,6 +7,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { UserLoginComponentComponent } from './user-login-component/user-login-component.component';
 import { UserRegistrationComponentComponent } from './user-registration-component/user-registration-component.component';
 import { ProductComponentComponent } from './product-component/product-component.component';
+import { ProductListComponentComponent } from './product-list-component/product-list-component.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductComponentComponent } from './product-component/product-component
     HomeComponentComponent,
     UserLoginComponentComponent,
     UserRegistrationComponentComponent,
-    ProductComponentComponent
+    ProductComponentComponent,
+    ProductListComponentComponent
   ],
   imports: [
     BrowserModule,
