@@ -1,4 +1,4 @@
-.form-group.required .control-label:after{
+.form-group.required .required:after{
     content: "*";
     color: red;
     position: absolute;
