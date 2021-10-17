@@ -20,11 +20,11 @@
        <tbody>
           <tr *ngFor="let product of products | listFilter: searchProduct | slice: (page-1) * pageSize : page * pageSize; index as i"> 
               
-              <td>{{product.name | string }}</td>
-              <td>{{product.code | string }}</td>
-              <td>{{product.description | string}}</td>
-              <td>{{product.price | string }}</td>
-              <td>{{product.image | string}}</td>
+              <td>{{product.name}}</td>
+              <td>{{product.code}}</td>
+              <td>{{product.description}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.image}}</td>
               <td></td>
             
            </tr>
