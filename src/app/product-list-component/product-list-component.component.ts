@@ -21,7 +21,7 @@ export class ProductListComponentComponent implements OnInit {
   pageSize = 4;
   collectionSize!: number;
   currentRate = 8;
-  products: Products[] = [];
+  products!: Products[];
   allProducts:Products[] | undefined;
 
   constructor(private http: HttpClient) { }
