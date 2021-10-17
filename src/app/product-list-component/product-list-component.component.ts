@@ -24,7 +24,11 @@ export class ProductListComponentComponent implements OnInit {
   products!: Products[];
   allProducts:Products[] ;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.searchProduct = "";
+    this.collectionSize = 0;
+    this.allProducts = [];
+  }
 
   ngOnInit(): void {
     this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
