@@ -1,46 +1,29 @@
-<table>
-    <thead>
-        <tr>
-            <th class="th-sm">
-                Name
-            </th>
-            <th class="th-sm">
-                Product Code
-            </th>
-            <th class="th-sm">
-                Description
-            </th>
-            <th class="th-sm">
-                Category Name
-            </th>
-            <th class="th-sm">
-                Price
-            </th>
-            <th class="th-sm">
-                Image
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Apple</td>
-            <td>Cabbage</td>
-        </tr>
-        <tr>
-            <td>123456</td>
-            <td>321654</td>
-        </tr>
-        <tr>
-            <td>this is a fruit </td>
-            <td>this is a verge </td>
-        </tr>
-         <tr>
-            <td>fruit </td>
-            <td>verge </td>
-         </tr> 
-         <tr>
-            <td>R2.00 </td>
-            <td>R5.00 </td>
-         </tr>  
-    </tbody>
-</table>
+<div class="m-3">
+   <p>List Of Products</p>
+   <form>
+       <div class="form-group form-inline">
+           Search product by name
+           <input type="text" class="form-control ml-2" name="searchProduct"/>
+       </div>
+   </form>
+   <table class="table table-striped">
+       <thead>
+           <tr>
+               <th scope="col">#</th>
+               <th scope="col" sortable="name">Product Name</th>
+               <th scope="col" sortable="name">Product Code</th>
+               <th scope="col" sortable="name">Product Description</th>
+               <th scope="col" sortable="name">Product Price</th>
+               <th scope="col" sortable="name">Product Image</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+
+           </tr>
+       </tbody>  
+   </table>
+   <ngb-pagination class="d-flex justify-content-center">
+
+   </ngb-pagination>
+</div>

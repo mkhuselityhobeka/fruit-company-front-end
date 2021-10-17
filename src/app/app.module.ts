@@ -8,6 +8,7 @@ import { UserLoginComponentComponent } from './user-login-component/user-login-c
 import { UserRegistrationComponentComponent } from './user-registration-component/user-registration-component.component';
 import { ProductComponentComponent } from './product-component/product-component.component';
 import { ProductListComponentComponent } from './product-list-component/product-list-component.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductListComponentComponent } from './product-list-component/product-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
