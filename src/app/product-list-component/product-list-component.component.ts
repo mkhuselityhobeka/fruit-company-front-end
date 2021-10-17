@@ -16,13 +16,13 @@ interface Products{
 })
 export class ProductListComponentComponent implements OnInit {
 
-  searchProductByName: string | undefined;
+  searchProduct: string
   page = 1;
   pageSize = 4;
-  collectionSize!: number;
+  collectionSize: number;
   currentRate = 8;
   products!: Products[];
-  allProducts:Products[] | undefined;
+  allProducts:Products[] ;
 
   constructor(private http: HttpClient) { }
 
@@ -32,6 +32,12 @@ export class ProductListComponentComponent implements OnInit {
     this.products = data;
     this.allProducts = this.products
     });
+  }
+  search(value : string){
+       this.products = this.allProducts?.filter((val) =>
+       val.name.toLowerCase().includes(value));
+       this.collectionSize = this.products.length;
+
   }
 
 }
