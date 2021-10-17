@@ -9,6 +9,7 @@ import { UserRegistrationComponentComponent } from './user-registration-componen
 import { ProductComponentComponent } from './product-component/product-component.component';
 import { ProductListComponentComponent } from './product-list-component/product-list-component.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListFilterPipe } from './listFilterPipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserLoginComponentComponent,
     UserRegistrationComponentComponent,
     ProductComponentComponent,
-    ProductListComponentComponent
+    ProductListComponentComponent,
+    ListFilterPipe
   ],
   imports: [
     BrowserModule,
