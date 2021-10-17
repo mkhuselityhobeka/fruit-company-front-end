@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 interface Products{
-  name:string
-  code:string
-  description:string
-  price:string
-  image:string
+  name:string;
+  code:string;
+  description:string;
+  price:string;
+  image:string;
 }
 
 @Component({
