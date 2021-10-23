@@ -18,15 +18,16 @@ interface Products{
 export class ProductListComponentComponent implements OnInit {
 
     products: Array<any>
-    totalRecords: Number
+    totalRecords: String
     page: Number=1
 
-  constructor(private http: HttpClient, private productListService : ProductListService) { 
+  constructor(private productListService : ProductListService) { 
      this.products = new Array<any>()
-     this.totalRecords = this.products.length
+     this.totalRecords = ""
   }
 
   ngOnInit(): void {
+    this.getProducts();
   }
   
   getProducts(){
