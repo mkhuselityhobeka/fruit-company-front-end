@@ -2,21 +2,21 @@
     {
       "name": "Apple",
       "code": "236548",
-      "Description": "It's a fruit",
+      "description": "It's a fruit",
       "price": "R2.00",
       "image": "f/f3/Flag_of_Russia.svg" 
       },
     {
         "name": "Orange",
         "code": "236548",
-        "Description": "It's a fruit",
+        "description": "It's a fruit",
         "price": "R2.00",
         "image": "f/f3/Flag_of_Russia.svg" 
     },
     {
         "name": "Grapes",
         "code": "236548",
-        "Description": "It's a fruit",
+        "description": "It's a fruit",
         "price": "R2.00",
         "image": "f/f3/Flag_of_Russia.svg" 
     }
