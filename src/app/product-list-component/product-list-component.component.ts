@@ -21,7 +21,7 @@ export class ProductListComponentComponent implements OnInit {
     totalRecords: String
     page: Number=1
 
-  constructor(private productListService : ProductListService) { 
+  constructor(private productListService: ProductListService) { 
      this.products = new Array<any>()
      this.totalRecords = ""
   }
@@ -31,7 +31,7 @@ export class ProductListComponentComponent implements OnInit {
   }
   
   getProducts(){
-      this.productListService.getProducts().subscribe((data:any) => {
+      this.productListService.getProductList().subscribe((data:any) => {
                console.log(data);
                this.products = data.results.length;
       });
