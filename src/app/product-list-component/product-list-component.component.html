@@ -18,7 +18,14 @@
            </tr>
        </thead>
        <tbody>
-          <tr *ngFor="let product of products | listFilter: searchProduct | slice: (page-1) * pageSize : page * pageSize; index as i"> 
+          <tr *ngFor="let product of products | listFilter: searchProduct | slice: (page-1) * pageSize : page * pageSize; index as i">
+               <th scope="row">{{(page-1) * pageSize + i + 1 }}</th>
+               <td>
+                   <img [src] = "'https://upload.wikimedia.org/wikipedia/commons/' + country.flag'" class="mr-2" style="width: 20px;">{{product.image}}
+               </td>
+               <td>{{ product.name }}</td>
+               <td>{{ product.code }}</td>
+               <td>{{ product.Description }}</td>
               
          
               
