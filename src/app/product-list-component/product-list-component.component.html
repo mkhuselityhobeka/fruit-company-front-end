@@ -17,7 +17,7 @@
            </tr>
        </thead>
        <tbody>
-          <tr *ngFor="let product of products | listFilter: searchProduct | paginate: {id: 'listing_pagination',
+          <tr *ngFor="let product of products | paginate: {id: 'listing_pagination',
                 itemsPerpage: 10,
                 currentPage: page,
                 totalItems: totalRecords}">
@@ -30,5 +30,7 @@
            </tr>
        </tbody>  
    </table>
-   
+   <div>
+    <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
+</div>
 </div>

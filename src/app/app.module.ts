@@ -22,6 +22,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ProductComponentComponent,
     ProductListComponentComponent,
     ListFilterPipe,
+    NgxPaginationModule,
     
   ],
   imports: [
