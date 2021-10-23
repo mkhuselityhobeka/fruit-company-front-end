@@ -21,16 +21,17 @@ export class ProductListComponentComponent implements OnInit {
   pageSize = 4;
   collectionSize: number;
   currentRate = 8;
-  products: any;
-  allProducts: any ;
+  products: any[];
+  allProducts:any[] ;
 
   constructor(private http: HttpClient) { 
     this.searchProduct = "";
     this.collectionSize = 0;
+    this.products = [];
+    this.allProducts = [];
   }
 
   ngOnInit(): void {
-   
     this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
     this.collectionSize = data.length;
     console.log("collectionSize is " + this.collectionSize);
