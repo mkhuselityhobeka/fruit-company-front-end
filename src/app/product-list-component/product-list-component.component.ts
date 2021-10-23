@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ProductListService } from '../services/product-list.service';
 
 interface Products{
   name:string;
@@ -16,41 +17,22 @@ interface Products{
 })
 export class ProductListComponentComponent implements OnInit {
 
-  searchProduct: string
-  page = 1;
-  pageSize = 4;
-  collectionSize: number;
-  currentRate = 8;
-  products: Products[];
-  allProducts:Products[] ;
+    products: Array<any>
+    totalRecords: Number
+    page: Number=1
 
-  constructor(private http: HttpClient) { 
-    this.searchProduct = "";
-    this.collectionSize = 0;
-    this.products = [];
-    this.allProducts = [];
+  constructor(private http: HttpClient, private productListService : ProductListService) { 
+     this.products = new Array<any>()
+     this.totalRecords = this.products.length
   }
 
   ngOnInit(): void {
-    this.productsList();
   }
   
-  productsList() : Products [] {
-
-    this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
-      this.collectionSize = data.length;
-      console.log("collectionSize is " + this.collectionSize);
-      this.products = data;
-      console.log("products is " + this.products);
-      this.allProducts = this.products
+  getProducts(){
+      this.productListService.getProducts().subscribe((data:any) => {
+               console.log(data);
+               this.products = data.results.length;
       });
-      return this.products;
-  }
-  search(value : string){
-       this.products = this.allProducts?.filter((val) =>
-       val.name.toLowerCase().includes(value));
-       this.collectionSize = this.products.length;
-
-  }
-
+   }
 }

@@ -11,6 +11,7 @@ import { ProductListComponentComponent } from './product-list-component/product-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListFilterPipe } from './listFilterPipe';
 import {HttpClientModule} from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [

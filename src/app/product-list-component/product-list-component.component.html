@@ -13,19 +13,22 @@
                <th scope="col" sortable="name">Product Name</th>
                <th scope="col" sortable="name">Product Code</th>
                <th scope="col" sortable="name">Product Description</th>
-               <th scope="col" sortable="name">Product Price</th>
                <th scope="col" sortable="name">Product Image</th>
            </tr>
        </thead>
        <tbody>
-          <tr *ngFor="let product of products | listFilter: searchProduct | slice: (page-1) * pageSize : page * pageSize; index as i">
-               <th scope="row">{{(page-1) * pageSize + i + 1 }}</th>
-               
+          <tr *ngFor="let product of products | listFilter: searchProduct | paginate: {id: 'listing_pagination',
+                itemsPerpage: 10,
+                currentPage: page,
+                totalItems: totalRecords}">
+              
+               <td>{{product.gender}}</td>
+               <td>{{product.name.first}}</td>
+               <td>{{product.email}}</td>
+               <td><img src="{{product.picture.medium}}" alt=""></td>
         
            </tr>
        </tbody>  
    </table>
-   <ngb-pagination  [collectionSize]= "collectionSize" [(page)]="page" [maxSize]="5" [boundaryLinks]="true" [pageSize]="pageSize" class="d-flex justify-content-center">
-
-   </ngb-pagination>
+   <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
 </div>
