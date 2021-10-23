@@ -21,13 +21,15 @@ export class ProductListComponentComponent implements OnInit {
   pageSize = 4;
   collectionSize: number;
   currentRate = 8;
-  products!: Products[];
+  products: Products[];
   allProducts:Products[] ;
 
   constructor(private http: HttpClient) { 
     this.searchProduct = "";
     this.collectionSize = 0;
+    this.products = [];
     this.allProducts = [];
+
   }
 
   ngOnInit(): void {
