@@ -3,7 +3,7 @@
    <form>
        <div class="form-group form-inline">
            Search product by name
-           <!--<input type="text" class="form-control ml-2" name="searchProduct" [(ngModel)]="searchProduct" (input)="search($any($event))"/>-->
+           <input type="text" class="form-control ml-2" name="searchProduct" [(ngModel)]="searchProduct" (input)="search($any($event))"/>
        </div>
    </form>
    <table class="table table-striped">
@@ -18,6 +18,12 @@
            </tr>
        </thead>
        <tbody>
+          <tr *ngFor="let product of products | listFilter: searchProduct | slice: (page-1) * pageSize : page * pageSize; index as i"> 
+              
+         
+              
+            
+           </tr>
        </tbody>  
    </table>
    <ngb-pagination  class="d-flex justify-content-center">

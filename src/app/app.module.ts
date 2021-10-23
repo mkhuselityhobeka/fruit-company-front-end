@@ -21,10 +21,11 @@ import {HttpClientModule} from '@angular/common/http';
     ProductComponentComponent,
     ProductListComponentComponent,
     ListFilterPipe,
-    HttpClientModule
+    
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     NgbModule, 
