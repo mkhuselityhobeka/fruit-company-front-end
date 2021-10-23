@@ -32,15 +32,20 @@ export class ProductListComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get<Products[]>('./assets/data/products.json').subscribe((data: any[]) => {
-    this.collectionSize = data.length;
-    console.log("collectionSize is " + this.collectionSize);
-    this.products = data;
-    console.log("products is " + this.products);
-    this.allProducts = this.products
-    });
+    this.productsList();
   }
   
+  productsList() : any [] {
+
+    this.http.get<Products[]>('./assets/data/products.json').subscribe((data: any[]) => {
+      this.collectionSize = data.length;
+      console.log("collectionSize is " + this.collectionSize);
+      this.products = data;
+      console.log("products is " + this.products);
+      this.allProducts = this.products
+      });
+      return this.products;
+  }
   search(value : string){
        this.products = this.allProducts?.filter((val) =>
        val.name.toLowerCase().includes(value));
