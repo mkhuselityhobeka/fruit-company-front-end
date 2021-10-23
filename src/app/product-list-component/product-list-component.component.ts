@@ -34,6 +34,7 @@ export class ProductListComponentComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
     this.collectionSize = data.length;
+    console.log("collectionSize is " + this.collectionSize);
     this.products = data;
     console.log("products is " + this.products);
     this.allProducts = this.products
