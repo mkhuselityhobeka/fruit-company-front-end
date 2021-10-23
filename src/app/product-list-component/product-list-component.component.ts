@@ -35,6 +35,7 @@ export class ProductListComponentComponent implements OnInit {
     this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
     this.collectionSize = data.length;
     this.products = data;
+    console.log("products is " + this.products);
     this.allProducts = this.products
     });
   }
