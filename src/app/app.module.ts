@@ -10,6 +10,7 @@ import { ProductComponentComponent } from './product-component/product-component
 import { ProductListComponentComponent } from './product-list-component/product-list-component.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListFilterPipe } from './listFilterPipe';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { ListFilterPipe } from './listFilterPipe';
     UserRegistrationComponentComponent,
     ProductComponentComponent,
     ProductListComponentComponent,
-    ListFilterPipe
+    ListFilterPipe,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
