@@ -21,7 +21,7 @@ export class ProductListComponentComponent implements OnInit {
   pageSize = 4;
   collectionSize: number;
   currentRate = 8;
-  products: Products[];
+  products!: Products[];
   allProducts:Products[] ;
 
   constructor(private http: HttpClient) { 
@@ -29,22 +29,21 @@ export class ProductListComponentComponent implements OnInit {
     this.collectionSize = 0;
     this.products = [];
     this.allProducts = [];
-
   }
 
   ngOnInit(): void {
-  //  this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
-  //  this.collectionSize = data.length;
-   // this.products = data;
-   // this.allProducts = this.products
-   // });
+    this.http.get<Products[]>('./assets/data/products.json').subscribe((data: Products[]) => {
+    this.collectionSize = data.length;
+    this.products = data;
+    this.allProducts = this.products
+    });
   }
+  
+  search(value : string){
+       this.products = this.allProducts?.filter((val) =>
+       val.name.toLowerCase().includes(value));
+       this.collectionSize = this.products.length;
 
- // search(value : string){
-  //     this.products = this.allProducts?.filter((val) =>
-  //     val.name.toLowerCase().includes(value));
- //      this.collectionSize = this.products.length;
-
- // }
+  }
 
 }
