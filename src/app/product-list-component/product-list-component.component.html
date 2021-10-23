@@ -21,8 +21,7 @@
           <tr *ngFor="let product of products | listFilter: searchProduct | slice: (page-1) * pageSize : page * pageSize; index as i">
                <th scope="row">{{(page-1) * pageSize + i + 1 }}</th>
                
-               <td>{{ product.name }}</td>
-               <td>{{ product.code }}</td>
+               
            </tr>
        </tbody>  
    </table>
